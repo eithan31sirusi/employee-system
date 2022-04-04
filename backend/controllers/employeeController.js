@@ -69,7 +69,7 @@ const createEmployee = asyncHandler(async (req, res) => {
 })
 
 
-// @desc    update employee.
+// @desc    update employee. 
 // @route   [PUT] /api/employees/updateEmployee
 // @access  Private
 // @payload employee: { firstName, lastName, phone, adress, roll} & :id
@@ -77,6 +77,7 @@ const editEmployee = asyncHandler(async (req, res) => {
     
     // take the data from client
     const employeeData = req.body;
+    console.log(employeeData);
 
     // find the id of current employee, and replace the data with employee variable (from client).
     const employee = await Employee.findOneAndUpdate({_id: req.params.id} , employeeData);
