@@ -1,33 +1,49 @@
 import React from "react";
 
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { SimpleLineIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+import {
+  CustomCardWrapper,
+  EmployeeImage,
+  EmployeeDetails,
+  EmployeeName,
+  DetailContainer,
+  Detail,
+  DetailText,
+  DetaiStartingDate,
+  DrawerButton,
+} from "./CustomCard.styles";
 
 const CustomCard = () => {
   return (
-    <View style={styles.cardWarper}>
-      <View style={styles.card}>
-        <Text>This is a card from the react-native-elements</Text>
-      </View>
-    </View>
+    <CustomCardWrapper>
+      <EmployeeImage source={require("../../assets/images/Avatar.png")} />
+      <EmployeeDetails>
+        <EmployeeName> Employee Name </EmployeeName>
+        <DetailContainer>
+          <SimpleLineIcons name="phone" size={24} color="black" />
+          <Detail>
+            <DetailText> Position </DetailText>
+            <DetaiStartingDate>Starting Date: Date</DetaiStartingDate>
+          </Detail>
+        </DetailContainer>
+        <DetailContainer>
+          <SimpleLineIcons name="phone" size={24} color="black" />
+          <Detail>
+            <DetailText> Position </DetailText>
+          </Detail>
+        </DetailContainer>
+        <DetailContainer>
+          <SimpleLineIcons name="phone" size={24} color="black" />
+          <Detail>
+            <DetailText> Position </DetailText>
+          </Detail>
+        </DetailContainer>
+      </EmployeeDetails>
+      <DrawerButton>
+        <MaterialCommunityIcons name="more" size={30} color="black" />
+      </DrawerButton>
+    </CustomCardWrapper>
   );
 };
-
-const styles = StyleSheet.create({
-  cardWarper: {
-    flex: 1,
-    alignItems: "center",
-    padding: 20,
-    backgroundColor: "#fff",
-  },
-
-  card: {
-    width: "100%",
-    height: 100,
-    backgroundColor: "red",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 5,
-  },
-});
 
 export default CustomCard;

@@ -4,8 +4,10 @@ import React from "react";
 
 import RootStack from "./navigators/RootStack";
 import Users from "./screens/Users/Users";
-import CustomCard from "./common/CustomCard/CustomCard";
+
+import MangingEmployees from "./screens/MangingEmployees/MangingEmployees";
 
 export default function App() {
-  return <RootStack />;
+  // return <RootStack />;
+  return <MangingEmployees />;
 }

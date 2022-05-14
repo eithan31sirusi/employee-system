@@ -17,17 +17,7 @@ export const Colors = {
   blue: "#2196f3",
 };
 
-const {
-  primary,
-  secondary,
-  tertiary,
-  dark,
-  darkLighit,
-  bgdark,
-  brand,
-  green,
-  blue,
-} = Colors;
+const { primary, dark, darkLighit, bgdark } = Colors;
 
 export const GlobalContainer = styled.View`
   flex: 1;
