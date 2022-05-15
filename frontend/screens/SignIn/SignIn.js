@@ -5,7 +5,7 @@ import { Formik } from "formik";
 
 // icons
 
-import { Octicons, Ionicons, Fontisto } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 // globalstyles
 
@@ -35,8 +35,6 @@ import {
 import {
   StyledButton,
   ButtonText,
-  MsgBox,
-  Line,
   ExtraView,
   ExtraText,
   TextLink,
@@ -98,8 +96,8 @@ const SignIn = ({ navigation }) => {
             onSubmit={(values) => {
               console.log(values);
               setTimeout(() => {
-                navigation.navigate("Users");
-              }, 2000);
+                navigation.navigate("Employees");
+              }, 100);
               navigation.navigate("Welcome");
             }}
           >

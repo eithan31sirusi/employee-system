@@ -72,9 +72,14 @@ font-size: 35px;
   `}
 `;
 
+export const SvgContainer = styled.View`
+  width: 40px;
+  height: 25px;
+`;
+
 export const PageTitleBG = styled.View`
   width: 100%;
-  height: 25%;
+  height: 28%;
   background-color: ${bgdark};
 `;
 

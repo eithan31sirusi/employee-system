@@ -1,13 +1,15 @@
 import React from "react";
 
+import { GlobalAppContainer } from "./App.styles";
+
 //React native navigation
 
 import RootStack from "./navigators/RootStack";
-import Users from "./screens/Users/Users";
 
 import MangingEmployees from "./screens/MangingEmployees/MangingEmployees";
+import AddEmployee from "./screens/AddEmployee/AddEmployee";
 
 export default function App() {
   // return <RootStack />;
-  return <MangingEmployees />;
+  return <RootStack />;
 }

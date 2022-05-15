@@ -1,17 +1,47 @@
 import React from "react";
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 import CustomCard from "../../common/CustomCard/CustomCard";
 
-import { InnerContainer } from "../../styles/global/styles.components";
+import {
+  GlobalContainer,
+  PageTitleBG,
+  PageTitle,
+  SvgContainer,
+} from "../../styles/global/styles.components";
 
-const MangingEmployees = () => {
+import { PageContainer } from "./MangingEmployees.styles";
+
+import AddICO from "../../assets/SVG/addico.svg";
+import ArrowICO from "../../assets/SVG/arrow.svg";
+
+const MangingEmployees = ({ navigation }) => {
   return (
     <>
-      <View>
-        <Text>Maniging Employees</Text>
-      </View>
-      <CustomCard />
+      <GlobalContainer>
+        <PageContainer>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("SignIn");
+            }}
+          >
+            <SvgContainer>
+              <ArrowICO />
+            </SvgContainer>
+          </TouchableOpacity>
+          <PageTitle>Maniging Employees</PageTitle>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("AddEmployee");
+            }}
+          >
+            <SvgContainer>
+              <AddICO />
+            </SvgContainer>
+          </TouchableOpacity>
+          <CustomCard />
+        </PageContainer>
+      </GlobalContainer>
     </>
   );
 };

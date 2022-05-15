@@ -16,7 +16,6 @@ import {
   SubTitle,
   StyledFormArea,
   Colors,
-  PageTitleBG,
   PageLogo,
   PageLogoContainer,
 } from "../../styles/global/styles.components";
@@ -42,6 +41,8 @@ import {
   TextLink,
   TextLinkContent,
 } from "../../common/CustomButton/Button";
+
+import { SignUpTitleBG } from "./SignUp.styles";
 
 // keyboard avoiding
 
@@ -114,12 +115,12 @@ const SignUp = ({ navigation }) => {
     <KeyboardAvoidingWarper>
       <GlobalContainer topPart={true}>
         <StatusBar style="dark" />
-        <PageTitleBG>
+        <SignUpTitleBG>
           <PageTitle>Sign Up</PageTitle>
           <PageLogoContainer>
             <PageLogo source={require("../../assets/images/sign-in-img.png")} />
           </PageLogoContainer>
-        </PageTitleBG>
+        </SignUpTitleBG>
 
         <InnerContainer>
           <SubTitle>Personal Details</SubTitle>
@@ -134,7 +135,7 @@ const SignUp = ({ navigation }) => {
             onSubmit={(values) => {
               console.log(values);
               setTimeout(() => {
-                navigation.navigate("Users");
+                navigation.navigate("SignIn");
               }, 2000);
               navigation.navigate("Welcome");
             }}

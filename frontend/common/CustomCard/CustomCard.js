@@ -1,6 +1,15 @@
-import React from "react";
+import { StyleSheet } from "react-native";
 
 import { SimpleLineIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+
+// CUSTOM SVG ICONS (created by me)
+
+import ArrowICO from "../../assets/SVG/arrow.svg";
+import BagICO from "../../assets/SVG/bagico.svg";
+import NvigationICO from "../../assets/SVG/navigationico.svg";
+import OpenmenueICO from "../../assets/SVG/openmenueico.svg";
+import PhoneICO from "../../assets/SVG/phoneico.svg";
+
 import {
   CustomCardWrapper,
   EmployeeImage,
@@ -13,6 +22,8 @@ import {
   DrawerButton,
 } from "./CustomCard.styles";
 
+import { SvgContainer } from "../../styles/global/styles.components";
+
 const CustomCard = () => {
   return (
     <CustomCardWrapper>
@@ -20,27 +31,36 @@ const CustomCard = () => {
       <EmployeeDetails>
         <EmployeeName> Employee Name </EmployeeName>
         <DetailContainer>
-          <SimpleLineIcons name="phone" size={24} color="black" />
+          <SvgContainer>
+            <BagICO />
+          </SvgContainer>
+
           <Detail>
-            <DetailText> Position </DetailText>
-            <DetaiStartingDate>Starting Date: Date</DetaiStartingDate>
+            <DetailText> HR </DetailText>
+            <DetaiStartingDate>Starting Date: 2 Feb 2020</DetaiStartingDate>
           </Detail>
         </DetailContainer>
         <DetailContainer>
-          <SimpleLineIcons name="phone" size={24} color="black" />
+          <SvgContainer>
+            <PhoneICO />
+          </SvgContainer>
+
           <Detail>
-            <DetailText> Position </DetailText>
+            <DetailText>050 80380336</DetailText>
           </Detail>
         </DetailContainer>
         <DetailContainer>
-          <SimpleLineIcons name="phone" size={24} color="black" />
+          <SvgContainer>
+            <NvigationICO />
+          </SvgContainer>
+
           <Detail>
-            <DetailText> Position </DetailText>
+            <DetailText> Rothschild 22, Tel Aviv </DetailText>
           </Detail>
         </DetailContainer>
       </EmployeeDetails>
       <DrawerButton>
-        <MaterialCommunityIcons name="more" size={30} color="black" />
+        <OpenmenueICO />
       </DrawerButton>
     </CustomCardWrapper>
   );
