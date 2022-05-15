@@ -9,7 +9,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SignIn from "../screens/SignIn/SignIn";
 import SignUp from "../screens/SignUp/SignUp";
 import Welcome from "../screens/Welcome/Welcome";
-import Users from "../screens/Users/Users";
+import MangingEmployees from "../screens/MangingEmployees/MangingEmployees";
+import AddEmployee from "../screens/AddEmployee/AddEmployee";
 
 import { Colors } from "../styles/global/styles.components";
 
@@ -20,12 +21,10 @@ const RootStack = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerStyle: {
-            backgroundColor: "transparent",
-          },
-          headerTintColor: Colors.tertiary,
+          headerTintColor: "red",
           headerTransparent: true,
           headerTitle: "",
+          headerBackVisible: false,
         }}
         initialRouteName="SignIn"
       >
@@ -37,7 +36,8 @@ const RootStack = () => {
           name="Welcome"
           component={Welcome}
         />
-        <Stack.Screen name="Users" component={Users} />
+        <Stack.Screen name="Employees" component={MangingEmployees} />
+        <Stack.Screen name="AddEmployee" component={AddEmployee} />
       </Stack.Navigator>
     </NavigationContainer>
   );

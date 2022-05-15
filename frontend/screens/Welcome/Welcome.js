@@ -34,17 +34,8 @@ const Welcome = ({ navigation }) => {
           <PageTitle welcome={true}>Welcome</PageTitle>
           <SubTitle welcome={true}>Avater!</SubTitle>
           <SubTitle welcome={true}>Mail@Mail.com</SubTitle>
-          <StyledFormArea>
-            <Avatar source={require("../../assets/images/Avatar.png")} />
-            <Line />
-            <StyledButton
-              onPress={() => {
-                navigation.navigate("SignIn");
-              }}
-            >
-              <ButtonText>Signout</ButtonText>
-            </StyledButton>
-          </StyledFormArea>
+
+          <Avatar source={require("../../assets/images/Avatar.png")} />
         </WelcomeContainer>
       </InnerContainer>
     </>

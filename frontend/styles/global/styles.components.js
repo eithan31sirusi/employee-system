@@ -17,17 +17,7 @@ export const Colors = {
   blue: "#2196f3",
 };
 
-const {
-  primary,
-  secondary,
-  tertiary,
-  dark,
-  darkLighit,
-  bgdark,
-  brand,
-  green,
-  blue,
-} = Colors;
+const { primary, dark, darkLighit, bgdark } = Colors;
 
 export const GlobalContainer = styled.View`
   flex: 1;
@@ -82,9 +72,14 @@ font-size: 35px;
   `}
 `;
 
+export const SvgContainer = styled.View`
+  width: 40px;
+  height: 25px;
+`;
+
 export const PageTitleBG = styled.View`
   width: 100%;
-  height: 25%;
+  height: 28%;
   background-color: ${bgdark};
 `;
 

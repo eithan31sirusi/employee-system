@@ -1,41 +1,49 @@
 import React from "react";
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { TouchableOpacity } from "react-native";
 
-import { InnerContainer } from "../../styles/global/styles.components";
+import CustomCard from "../../common/CustomCard/CustomCard";
 
-const MangingEmployees = () => {
+import {
+  GlobalContainer,
+  PageTitleBG,
+  PageTitle,
+  SvgContainer,
+} from "../../styles/global/styles.components";
+
+import { PageContainer } from "./MangingEmployees.styles";
+
+import AddICO from "../../assets/SVG/addico.svg";
+import ArrowICO from "../../assets/SVG/arrow.svg";
+
+const MangingEmployees = ({ navigation }) => {
   return (
     <>
-      <CustomCard />
+      <GlobalContainer>
+        <PageContainer>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("SignIn");
+            }}
+          >
+            <SvgContainer>
+              <ArrowICO />
+            </SvgContainer>
+          </TouchableOpacity>
+          <PageTitle>Maniging Employees</PageTitle>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("AddEmployee");
+            }}
+          >
+            <SvgContainer>
+              <AddICO />
+            </SvgContainer>
+          </TouchableOpacity>
+          <CustomCard />
+        </PageContainer>
+      </GlobalContainer>
     </>
   );
 };
-
-const CustomCard = () => {
-  return (
-    <View style={styles.cardContainer}>
-      <View style={styles.card}>
-        <Text>Add Employee</Text>
-        <Text>Employees List</Text>
-      </View>
-    </View>
-  );
-};
-const deviceWidth = Math.round(Dimensions.get("window").width);
-const styles = StyleSheet.create({
-  cardContainer: {
-    width: "100%",
-    backgroundColor: "#178f7a",
-    height: 200,
-    padding: 50,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  card: {
-    width: "50%",
-    backgroundColor: "#000",
-  },
-});
 
 export default MangingEmployees;
